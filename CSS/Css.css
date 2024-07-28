@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #f0f0f0;
+    font-family: "Roboto", sans-serif;
+}
+html{
+    overflow-x:hidden ;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom,rgba(0, 0, 0, 0.578) 70%,transparent,rgba(0, 0, 0, 0.578) ),url(../Images/bg.jpg);
+    background-size: cover;
+}
+.weather-frame{
+    border-radius:10px ;
+    padding:1rem 0.5rem ;
+    background: rgba(255, 255, 255, 0.178);
+    backdrop-filter: blur(10px);
+    width: 95%;
+    max-width: 445px;
+}
+.weather-frame h2{
+    font-size: 2rem;
+    text-align: center;
+    padding: 2rem 0;
+}
+.weather-frame form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #f0f0f0;
+    padding: 0 1.5rem;
+    border-radius: 45px;
+    overflow: hidden;
+}
+form .form-input{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+form .form-input i{
+    color: #756767;
+    font-size: 1.5rem;
+    visibility: hidden;
+}
+.form-input .search-value{
+    border: none;
+    font-size: 1.5rem;
+    color: #000;
+    padding: 1rem 0.5rem;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    text-transform: capitalize;
+}
+.search-value::placeholder{
+    text-align: center;
+}
+form button{
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+form button i{
+    color: #000;
+    font-size: 1.5rem;
+    visibility: hidden;
+}
+form button i:hover{
+    color: red;
+}
+.weather-report{
+    border-top: 3px solid #635c5c;
+    margin-top: 1rem;
+    padding: 1rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.weather-report img{
+    width: 30%;
+}
+.weather-report p{
+    font-size: 3.0rem;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.weather-report p span{
+    font-size: 1.3rem;
+}
+.weather-report h3{
+    font-size: 1.5rem;
+    word-break: break-all;
+    font-weight: 300;
+    width: 100%;
+    text-align: center;
+}
+.weather-report .extra-report{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+.extra-report .humidity-box,.extra-report .wind-box{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.humidity-box img,.wind-box img{
+    width: 30%;
+}
+.humidity-box .humidity-report,.wind-box .wind-report{
+    display: inline-block;
+}
+.humidity-report p,.wind-report p{
+    font-size: 1.0rem;
+}
+.message-box{
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* Media Queries */
+@media screen and (max-width:420px) {
+    form .form-input{
+        width: 98%;
+    }
+    form button{
+        margin-bottom:0.5rem ;
+    }
+}
